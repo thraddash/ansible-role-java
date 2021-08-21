@@ -14,7 +14,7 @@ Available variables are listed below, along with default values:
 
     # The defaults provided by this role are specific to each distribution.
     java_packages:
-      - java-1.7.0-openjdk
+      - java-11-openjdk
 
 Set the version/development kit of Java to install, along with any other necessary Java packages. Some other options include are included in the distribution-specific files in this role's 'defaults' folder.
 
@@ -42,7 +42,7 @@ For RHEL / CentOS:
         - role: geerlingguy.java
           when: "ansible_os_family == 'RedHat'"
           java_packages:
-            - java-1.8.0-openjdk
+            - java-11-openjdk
 
 For Ubuntu < 16.04:
 
@@ -56,7 +56,7 @@ For Ubuntu < 16.04:
         - role: geerlingguy.java
           when: "ansible_os_family == 'Debian'"
           java_packages:
-            - openjdk-8-jdk
+            - java-11-openjdk
 
 ## License
 
